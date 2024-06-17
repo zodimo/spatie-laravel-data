@@ -1,49 +1,50 @@
 {
-  "name": "Training Portal",
-  "dockerComposeFile": ["docker-compose.yml"],
-  "workspaceFolder": "/workspace",
-  "service": "app",
-  "shutdownAction": "stopCompose",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "#terminal.integrated.shell.linux": "/bin/bash",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.insertSpaces": true,
-        "php.format.codeStyle": "Off",
-        "php.suggest.basic": false,
-        "php.completion.showParameters": true,
-        "terminal.integrated.scrollback": 10000,
-        "php-cs-fixer.onsave": true,
-        "php-cs-fixer.executablePath": "/workspace/vendor/bin/php-cs-fixer",
-        "phpstan.memoryLimit": "16G",
-        "phpstan.binPath": "/workspace/vendor/bin/phpstan",
-        "php.debug.executablePath": "/usr/bin/php",
-        "[php]": {
-          "editor.defaultFormatter": "junstyle.php-cs-fixer"
-        },
-        "[xml]": {
-          "editor.defaultFormatter": "redhat.vscode-xml"
-        },
-        "files.associations": {
-          "*.neon": "yaml"
+    "name": "laravel-data",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "workspaceFolder": "/workspace",
+    "service": "app",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "#terminal.integrated.shell.linux": "/bin/bash",
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true,
+                "editor.insertSpaces": true,
+                "php.format.codeStyle": "Off",
+                "php.suggest.basic": false,
+                "php.completion.showParameters": true,
+                "terminal.integrated.scrollback": 10000,
+                "php-cs-fixer.onsave": true,
+                "php-cs-fixer.executablePath": "/workspace/vendor/bin/php-cs-fixer",
+                "phpstan.memoryLimit": "16G",
+                "phpstan.binPath": "/workspace/vendor/bin/phpstan",
+                "php.debug.executablePath": "/usr/bin/php",
+                "[php]": {
+                    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+                },
+                "[xml]": {
+                    "editor.defaultFormatter": "redhat.vscode-xml"
+                },
+                "files.associations": {
+                    "*.neon": "yaml"
+                }
+            },
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "esbenp.prettier-vscode",
+                "xdebug.php-debug",
+                "redhat.vscode-xml",
+                "DEVSENSE.phptools-vscode",
+                "editorconfig.editorconfig",
+                "mikestead.dotenv",
+                "christian-kohler.path-intellisense",
+                "CoenraadS.bracket-pair-colorizer",
+                "junstyle.php-cs-fixer"
+            ]
         }
-      },
-      "extensions": [
-        "bmewburn.vscode-intelephense-client",
-        "esbenp.prettier-vscode",
-        "xdebug.php-debug",
-        "redhat.vscode-xml",
-        "DEVSENSE.phptools-vscode",
-        "editorconfig.editorconfig",
-        "mikestead.dotenv",
-        "christian-kohler.path-intellisense",
-        "CoenraadS.bracket-pair-colorizer",
-        "junstyle.php-cs-fixer"
-      ]
     }
-  }
-
-  // "postCreateCommand": "composer install && npm install"
+    // "postCreateCommand": "composer install && npm install"
 }
